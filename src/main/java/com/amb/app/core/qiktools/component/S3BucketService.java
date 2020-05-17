@@ -35,8 +35,8 @@ public class S3BucketService {
         AmazonS3 s3Client=null;
         try {
             AWSCredentials credentials = new BasicAWSCredentials(
-                    "AKIAY2WMWS7JRKSFL4WR",
-                    "sBpJ4DYzYSJEfmhW1RlCdjSzHhxWr/GFodKM/qby"
+                    "AKIAY2WMWS7J7XOSSRFR",
+                    "Q7EvyhOfUe/4i+gaOEOYPsI3EHNf2S2c1rpjEkPH"
             );
 
             s3Client = AmazonS3ClientBuilder.standard()
