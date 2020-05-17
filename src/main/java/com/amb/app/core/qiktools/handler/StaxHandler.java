@@ -116,7 +116,6 @@ public class StaxHandler extends StAXHandlerAbstract {
     public static void main(String[] args) throws Docx4JException, JAXBException, XMLStreamException {
 
         // Input docx has variables in it: ${colour}, ${icecream}
-        //String inputfilepath = System.getProperty("user.dir") + "/.docx";
         //String inputfilepath = "D:\\01_GitHub_workspace_Bala\\GitHubRepository\\qiktools\\qiktools\\file\\resume_templates\\classic_03.docx";
         // String outputfilepath = System.getProperty("user.dir") + "/OUT_VariableReplaceStAX.docx";
         StaxHandler staxHandler = new StaxHandler();
@@ -145,39 +144,5 @@ public class StaxHandler extends StAXHandlerAbstract {
         }
     }
 
-/*        String outputfilepath="D:\\01_GitHub_workspace_Bala\\GitHubRepository\\qiktools\\qiktools\\file\\output\\classic_03_out.docx";
-
-*//*        WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage
-                .load(new java.io.File(inputfilepath));
-        MainDocumentPart documentPart = wordMLPackage.getMainDocumentPart();*//*
-        StaxHandler staxHandler=new StaxHandler();
-        WordprocessingMLPackage wordMLPackage=staxHandler.getDocumentTemplate( inputfilepath,null );
-        MainDocumentPart documentPart = wordMLPackage.getMainDocumentPart();
-        mappings.put("qiktoolcolour", "green");
-        mappings.put("qiktooltbldegree", "engineering");
-        mappings.put("colour", "red");
-        mappings.put("icecream", "chocolate");
-
-        long start = System.currentTimeMillis();
-
-        documentPart.pipe(new StaxHandler() );
-
-
-        long end = System.currentTimeMillis();
-        long total = end - start;
-        System.out.println("Time: " + total);
-
-        // Save it
-        if (save) {
-//			SaveToZipFile saver = new SaveToZipFile(wordMLPackage);
-//			saver.save(outputfilepath);
-
-            Docx4J.save(wordMLPackage, new File(outputfilepath));
-
-        } else {
-            System.out.println( XmlUtils.marshaltoString(documentPart.getJaxbElement(), true,
-                    true));
-        }
-    }*/
 
 }
